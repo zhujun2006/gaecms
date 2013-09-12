@@ -5,9 +5,22 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
+
+- url: /img
+  static_dir: static/img
+
+- url: /css
+  static_dir: static/css
+  
+- url: /js
+  static_dir: static/js
+
+- url: /html
+  static_dir: static/html
+  
+- url: /favicon.ico
+  static_files: static/favicon.ico
+  upload: static/favicon.ico
 
 - url: .*
   script: wsgi.application
